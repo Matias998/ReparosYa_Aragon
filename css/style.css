@@ -47,7 +47,15 @@ header {
 .navbar__link {
    display: inline;
    margin: 0.2rem;
-   padding: 1rem;
+   padding: 0.3rem;
+}
+.navbar__link a {
+   padding: 0.8rem;
+   transition: all .3s ease-in-out;
+}
+.navbar__link a:hover {
+   color: rgba(233, 233, 233, 1);
+   background-color: rgba(140, 140, 140, 1);
 }
 
 /*FOOTER*/
@@ -74,6 +82,7 @@ footer {
 /*COVER-SECTION*/
 #cover {
    margin: 0;
+   padding: 0;
 }
 .cover {
    width: 100%;
@@ -166,7 +175,7 @@ footer {
    background-size: cover;
 }
 .contact h2 {
-   color: rgb(228, 228, 228, 1);
+   color: rgb(233, 233, 233, 1);
 }
 .contact-input {
    display: flex;
@@ -193,6 +202,9 @@ footer {
 
 /*-----------------ABOUT PAGE----------------------/
 /*HISTORIA SECTION*/
+#historia {
+   margin: 0;
+}
 .about__block {
    margin: 2rem auto;
    width: 85%;
@@ -256,6 +268,9 @@ footer {
 
 /*-----------------SERVICE PAGE----------------------/
 /*SERVICIOS SECTION*/
+#servicios {
+   margin: 0;
+}
 .service-grid {
    display: grid;
    grid-template-columns: repeat(2, 1fr); 
@@ -276,6 +291,10 @@ footer {
    padding: 1rem;
    margin: 1.1rem 0;
    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+   transition: all .4s ease-in-out;
+}
+.service-category:hover {
+   transform: scale(1.04);
 }
 .service-category img {
    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
@@ -328,6 +347,11 @@ footer {
    border-radius: 8px;
    background-color: rgb(38, 100, 194);
    color: rgba(233, 233, 233, 1);
+   transition: all .3s ease-in-out;
+}
+.plan-card button:hover {
+   color: rgba(0, 0, 0, 1);
+   background-color: rgba(233, 233, 233, 1);
 }
 
 /*-----------------CONTACT PAGE*----------------------/
