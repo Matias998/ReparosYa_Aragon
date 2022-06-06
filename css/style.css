@@ -11,72 +11,48 @@ body {
 h1, h2 , h3{
    font-family: 'Open Sans', sans-serif;
 }
-p, li {
+p, li, a{
    font-family: 'Montserrat', sans-serif;
-}
-a {
-   text-decoration: none;
-   color: rgba(0, 0, 0, 1);
-}
-
-section {
-   margin: 3rem 0;
-   padding: 3rem 0;
-}
-
-.container {
-   display: flex;
-   justify-content: center;
-   flex-direction: row;
-}
-.section-title {
-   margin-bottom: 3rem;
-}
-
-/*HEADER*/
-header {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 1.8rem 3.5rem;
 }
 .logo {
    width: 30px;
    height: 30px;
 }
-.navbar__link {
-   display: inline;
-   margin: 0.2rem;
-   padding: 0.3rem;
+
+/*HEADER*/
+nav.navbar {
+   padding: 1rem;
 }
-.navbar__link a {
-   padding: 0.8rem;
-   transition: all .3s ease-in-out;
+.nav-link {
+   color: rgba(0, 0, 0, 1);
 }
-.navbar__link a:hover {
-   color: rgba(233, 233, 233, 1);
-   background-color: rgba(140, 140, 140, 1);
+.nav-link:hover {
+   background-color: rgba(190, 190, 190, 1);
+   border-radius: 8px;
+   transition-duration: .3s;
 }
 
 /*FOOTER*/
 footer {
-   background-color: rgba(140, 140, 140, 1);
-   display: flex;
-   margin-top: 2rem;
-   padding: 2rem 3.75rem;
-   align-items: center;
-   justify-content: space-around;
+   background-color: rgba(80, 80, 80, 1);
    text-align: left;
 }
+.footer__logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 .footer__pages {
-   margin: auto 0.85rem;
+   margin: auto 0;
+}
+.footer__media {
+   margin: auto 0;
 }
 .footer__list {
-   margin-top: 0.5rem;
+   margin-top: 0;
 }
-.footer__link {
-   list-style: none;
-}
+
+
 
 /*-----------------MAIN PAGE----------------------/
 /*COVER-SECTION*/
@@ -86,85 +62,50 @@ footer {
 }
 .cover {
    width: 100%;
-   height: 90vh;
-}
-.cover__img {
-   width: inherit;
-   height: inherit;
-   object-fit: cover;
+   height: 100vh;
+   background-image: url(../assets/img/home-img.jpg);
+   background-size: cover;
+   background-position: 55%;
+   position: relative;
 }
 .cover__title {
    width: 40%;
    height: 40%;
-   background-color: rgba(200, 222, 226, 1);
-   position: relative;
-   bottom: 80%;
-   left: 4%;
+   padding: 2rem;
    text-align: left;
+   background-color: rgba(200, 222, 226, 1);
+   position: absolute;
+   top: 10%;
+   left: 5%;
 }
 .cover__title h1 {
    font-size: 2rem;
 }
 .cover__title p {
    font-size: 1.2rem;
-   margin-top: 1rem;
+   margin-top: 3rem;
 }
 
 /*SOBRE-NOSOTROS SECTION*/
-.main-about-us {
-   width: 90%;
-   margin: 0 auto;
-}
-
 .main-card {
-   display: flex;
+   margin: 3rem 0;
    align-items: center;
-   margin-top: 2.5rem;
-}
-.main-card__image {
-   width: 100%;
-}
-.main-card__description {
-   margin: auto 2rem;
-   padding: 0.65rem;
-   text-align: left;
 }
 
 /*OPINIONES SECTION*/
-.opinion-grid {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr); 
-   grid-template-rows: 1fr;
-   justify-content: center; 
-   align-content: center; 
-   justify-items: center; 
-   align-items: center;
-   width: 75%;
-   margin: auto;
-}
 .opinion-card {
    background-color: rgb(228, 228, 228, 1);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 70%;
-   height: 24rem;
-   margin: 0 0.4rem;
+   height: 25rem;
    padding: 1.55rem;
 }
 .opinion-card__comment {
    margin-top: 2.5rem;
 }
 .opinion-card__pfp {
-   width: 50%;
    border-radius: 50%;
 }
 
 /*CONTACTO SECTION*/
-#contacto {
-   margin-bottom: 1rem;
-   padding-bottom: 1rem;
-}
 .contact {
    display: flex;
    flex-direction: column;
@@ -186,19 +127,22 @@ footer {
 .contact-input__email {
    font-family: 'Montserrat', sans-serif;
    font-size: 100%;
-   padding: 1px;
-   margin: 0.5rem 0;
+   padding: .8rem;
+   margin: .5rem 0;
    width: 20rem;
-   height: 27px;
+   height: 35px;
    border-radius: 8px;
 }
 .contact-input__btn {
-   width: 6rem;
-   padding: 0.3rem;
+   background-color: rgba(218, 165, 32, 1);
+   border-color: rgb(204, 155, 33, 1);
+   padding: .4rem .8rem;
    border-radius: 8px;
    font-size: 1rem;
    font-weight: 600;
 }
+
+
 
 /*-----------------ABOUT PAGE----------------------/
 /*HISTORIA SECTION*/
@@ -265,6 +209,8 @@ footer {
    text-align: center;
    margin-top: 4.5rem;
 }
+
+
 
 /*-----------------SERVICE PAGE----------------------/
 /*SERVICIOS SECTION*/
@@ -354,6 +300,8 @@ footer {
    background-color: rgba(233, 233, 233, 1);
 }
 
+
+
 /*-----------------CONTACT PAGE*----------------------/
 /*CONTACTO SECTION*/
 .contact-block {
@@ -400,57 +348,52 @@ footer {
 }
 
 
-/*------------------------MEDIA QUERIES----------------------------*/
-/*------------------TABLET DISPLAY-------------------*/
-@media screen and (max-width: 769px) {
-   section {
-      margin: 4rem 0;
-   }
-   .section-title {
-      margin-bottom: 2rem;
-   }
-   h2 {
-      font-size: 1.24rem;
-   }
-   h3 {
-      font-size: 1rem;
-   }
-   main p {
-      font-size: 0.8rem;
-   }
 
+
+/*--------------------------MEDIA QUERIES----------------------------*/
+/*-----------------BOOTSTRAP 992px-------------------*/
+@media screen and (max-width: 992px) {
+   main p {
+      font-size: 0.9rem;
+   }
+}
+
+
+
+
+/*------------------TABLET DISPLAY-------------------*/
+@media screen and (max-width: 768px) {
    /*-------MAIN PAGE------*/
    /*COVER SECTION*/
    .cover {
       height: 80vh;
    }
+   .cover__title {
+      width: 50%;
+   }
    .cover__title h1 {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
    }
    .cover__title p {
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin-top: 2rem;
    }
    
    /*OPINIONES SECTION*/
-   .opinion-grid {
-      grid-template-columns: 1fr;
-   }
    .opinion-card {
-      width: 50%;
       height: 19rem;
       margin: 1rem 0;
    }
    .opinion-card__comment {
       font-size: 0.9rem;
    }
-   .opinion-card__pfp {
-      width: 35%;
-   }
 
    /*CONTACTO SECTION*/
    .contact-input__btn {
-      width: 4rem;
+      width: 4.5rem;
    }
+
+
 
    /*------ABOUT PAGE------*/
    /*OBJETIVOS SECTION*/
@@ -469,6 +412,8 @@ footer {
    .objective-card__desc {
       font-size: 0.9rem;
    }
+
+
 
    /*-----SERVICE PAGE-----*/
    /*SERVICIOS SECTION*/
@@ -511,38 +456,74 @@ footer {
    }
 }
 
-/*----------------SMARTPHONE DIPLAY-------------------*/
-@media screen and (max-width: 420px) {
-   /*HEADER*/
-   header {
-      display: block;
-      padding: 1.2rem 3.5rem;
-   }
-   .navbar__link {
-      display: block;
-      margin: 0.1rem;
-      padding: 0.5rem;
-   }
 
+
+
+/*--------------------BOOTSTRAP 576px--------------------*/
+@media screen and (max-width: 576px) {
    /*FOOTER*/
    footer {
-      display: block;
       margin-top: 2rem;
       padding: 2rem 3.75rem;
    }
-   .footer__pages {
+   .footer__logo, .footer__pages, .footer__media {
       margin: 1rem 0;
    }
+   .footer__logo {
+      justify-content: flex-start;
+   }
+
 
    /*-------MAIN PAGE------*/
    /*COVER SECTION*/
    .cover__title {
-      width: 50%;
-      height: 30%;
-      bottom: 70%;
+      width: 60%;
+      height: 40%;
+      top: 5%;
+      padding: .5rem;
    }
+
+   /*SOBRE-NOSOTROS SECTION*/
+   .main-card__image {
+      margin-bottom: 1.5rem;
+   }
+   .main-card--reverse {
+      flex-direction: column-reverse;
+   }
+
+   /*OPINIONES SECTION*/
+   .opinion-card.card {
+      flex-direction: row;
+      justify-content: center;
+      width: 90%;
+      height: auto;
+      padding: 1rem;
+   }
+   .opinion-card__pfp {
+      margin-right: 1rem;
+      object-fit: contain;
+   }
+   .opinion-card__comment {
+      margin: 0 0 0 .6rem;
+      font-size: .8rem;
+      text-align: left;
+   }
+}
+
+
+
+
+/*----------------SMARTPHONE DIPLAY-------------------*/
+@media screen and (max-width: 420px) {
+   main p {
+      font-size: .8rem;
+   }
+
+   
+   /*-------MAIN PAGE------*/
+   /*COVER SECTION*/
    .cover__title h1 {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
    }
    .cover__title p {
       font-size: 1rem;
@@ -550,32 +531,10 @@ footer {
 
    /*SOBRE-NOSOTROS SECTION*/
    .main-card {
-      flex-direction: column;
-      width: 75%;
       margin: 1.3rem auto;
-   }
-   .main-card--reverse {
-      flex-direction: column-reverse;
    }
    .main-card__description {
       margin: 1.3rem auto;
-   }
-
-   /*OPINIONES SECTION*/
-   .opinion-card {
-      flex-direction: row;
-      justify-content: center;
-      width: 90%;
-      height: 8rem;
-   }
-   .opinion-card__pfp { 
-      width: 3.7rem;
-      margin-right: 1rem;
-   }
-   .opinion-card__comment {
-      margin: 0;
-      font-size: 0.8rem;
-      text-align: left;
    }
    
    /*CONTACTO SECTION*/
@@ -590,6 +549,8 @@ footer {
    .about__block {
       width: 100%;
    }
+
+
 
    /*-----SERVICE PAGE-----*/
    /*SERVICIOS SECTION*/
