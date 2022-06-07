@@ -20,8 +20,11 @@ p, li, a{
 }
 
 /*HEADER*/
+header {
+   background-color: rgba(218, 165, 32, 1);
+}
 nav.navbar {
-   padding: 1rem;
+   padding: .6rem;
 }
 .nav-link {
    color: rgba(0, 0, 0, 1);
@@ -304,57 +307,40 @@ footer {
 
 /*-----------------CONTACT PAGE*----------------------/
 /*CONTACTO SECTION*/
-.contact-block {
-   width: 100%;
-   margin: 0 auto;
-   align-items: center;
-   position: relative;
-}
-.form input {
+.form__input, .form__message {
    font-family: 'Montserrat', sans-serif;
-   font-size: 100%;
-   margin: 0 1.5rem 3.7rem 1.5rem;
-   padding: 2px;
-   width: 400px;
-   height: 30px;
    border-radius: 8px;
 }
-.form textarea {
-   width: 50rem;
-   border-radius: 8px;
-   padding: 4px;
+.form__message {
    resize: none;
-   font-family: 'Montserrat', sans-serif;
-   font-size: 17px;
 }
 
 /*LOCALIDAD SECTION*/
-.contact-block iframe {
+.location {
+   position: relative;
+}
+.location-details, .location iframe {
    width: 100%;
-   height: 400px;
+   height: 65vh;
 }
 .location-details {
-   background-color: rgba(140, 140, 140, 1);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   background-color: rgba(200, 200, 200, 1);
    width: 425px;
-   height: 368px;
-   padding: 1rem;
    text-align: left;
    position: absolute;
    top: 0;
-   right: 10%;
+   right: 6%;
 }
-.location-details .section-title{
-   margin: 20px 0 40px 0;
-}
-
-
 
 
 /*--------------------------MEDIA QUERIES----------------------------*/
 /*-----------------BOOTSTRAP 992px-------------------*/
 @media screen and (max-width: 992px) {
    main p {
-      font-size: 0.9rem;
+      font-size: .9rem;
    }
 }
 
@@ -454,6 +440,32 @@ footer {
       padding: 0.35rem;
       font-weight: 500;
    }
+   
+
+
+   /*-----CONTACT PAGE-----*/
+   /*CONTACTO SECTION*/
+   .contact-form .row {
+      padding-left: 3rem;
+      padding-right: 3rem;
+   }
+
+
+   /*LOCALIDAD SECTION*/
+   .location {
+      position: static;
+   }
+   .location-details {
+      display: block;
+      background-color: rgba(255, 255, 255, 1);
+      position: static;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+   }
+   .location-details h2 {
+      margin-bottom: 2.5rem;
+   }
 }
 
 
@@ -471,6 +483,9 @@ footer {
    }
    .footer__logo {
       justify-content: flex-start;
+   }
+   .footer__media p {
+      display: none;
    }
 
 
