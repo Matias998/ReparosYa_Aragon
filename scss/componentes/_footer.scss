@@ -1,0 +1,34 @@
+footer {
+   text-align: left;
+   background-color: $gris;
+
+   @media screen and (max-width: $media-sm) {
+      margin-top: 2rem;
+      padding: 2rem 3.75rem;
+   }
+}
+
+.footer {
+   &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__pages,
+   &__media { margin: auto 0; }
+
+   &__list { margin-top: 0; }
+
+   @media screen and (max-width: $media-sm) {
+      &__logo,
+      &__pages,
+      &__media { margin: 1rem 0; }
+
+      &__logo { justify-content: flex-start; }
+
+      &__media {
+         p { display: none; }
+      }
+   }
+}

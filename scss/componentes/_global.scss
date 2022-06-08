@@ -1,0 +1,34 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body { text-align: center; }
+
+h1, 
+h2, 
+h3 {
+   font-family: $fuente-titulo;
+}
+
+p, 
+li, 
+a { 
+   font-family: $fuente-base;
+}
+
+main {
+   p {
+      @media screen and (max-width: $media-lg) {
+         font-size: .9rem;
+      }
+      @media screen and (max-width: $media-mobile) {
+         font-size: .8rem;
+      }
+   }
+}
+
+.logo {
+   width: 30px;
+   height: 30px;
+}

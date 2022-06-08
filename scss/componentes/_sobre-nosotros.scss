@@ -1,0 +1,88 @@
+//HISTORIA SECTION
+#historia { margin: 0; }
+
+.about {
+   &__block {
+      width: 85%;
+      height: 27rem;
+      margin: 2rem auto;
+   }
+
+   &__img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+   }
+
+   &__desc { margin: 1.75rem 5rem; }
+
+   @media screen and (max-width: $media-mobile) {
+      &__block { width: 100%; }
+   }
+}
+
+//OBJETIVOS SECTION
+#objetivos { background-color: lighten($gris, 40%); }
+
+.objective-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); 
+   grid-template-rows: 1fr;
+   justify-content: center; 
+   align-content: center; 
+   justify-items: center; 
+   align-items: center;
+   width: 90%;
+   margin: auto;
+
+   @media screen and (max-width: $media-md) {
+      grid-template-columns: 1fr;
+      row-gap: 1%;
+   }
+}
+
+.objective-card {
+   &-1,
+   &-2,
+   &-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 30rem;
+      padding: 1.5rem;
+      background-size: cover;
+   }
+
+   &-1 { background-image: linear-gradient(rgba($negro, .75), rgba($negro, .5)), url(../assets/img/objetivo-01.jpg); }
+   &-2 { background-image: linear-gradient(rgba($negro, .75), rgba($negro, .5)), url(../assets/img/objetivos-02.jpg); }
+   &-3 { background-image: linear-gradient(rgba($negro, .75), rgba($negro, .5)), url(../assets/img/objetivos-03.jpg); }
+
+   &__title {
+      margin-bottom: 4.5rem;
+      color: $blanco;
+      font-size: 2rem;
+      text-align: center;
+   }
+
+   &__desc {
+      margin-top: 4.5rem;
+      color: $blanco;
+      font-size: 1.15em;
+      text-align: center;
+   }
+
+   @media screen and (max-width: $media-md) {
+      &-1,
+      &-2,
+      &-3 {
+         width: 60%;
+         height: 19rem;
+         background-position: 75%;
+      }
+
+      &__title { font-size: 1.4rem; }
+      &__desc { font-size: .9rem; }
+   }
+}

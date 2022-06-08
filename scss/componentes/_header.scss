@@ -1,0 +1,17 @@
+header {
+   background-color: $dorado;
+}
+
+nav.navbar {
+   padding: .6rem;
+}
+
+.nav-link {
+   color: $negro;
+   
+   &:hover {
+      background-color: lighten($gris, 60%);
+      border-radius: 8px;
+      transition-duration: .3s;
+   }
+}

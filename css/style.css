@@ -1,596 +1,562 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap");
 * {
-   margin: 0;
-   padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-   text-align: center;
+  text-align: center;
 }
 
-h1, h2 , h3{
-   font-family: 'Open Sans', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
 }
-p, li, a{
-   font-family: 'Montserrat', sans-serif;
+
+p,
+li,
+a {
+  font-family: "Monserrat", sans-serif;
 }
+
+@media screen and (max-width: 992px) {
+  main p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  main p {
+    font-size: 0.8rem;
+  }
+}
+
 .logo {
-   width: 30px;
-   height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
-/*HEADER*/
 header {
-   background-color: rgba(218, 165, 32, 1);
+  background-color: rgb(218, 165, 32);
 }
+
 nav.navbar {
-   padding: .6rem;
+  padding: 0.6rem;
 }
+
 .nav-link {
-   color: rgba(0, 0, 0, 1);
+  color: rgb(0, 0, 0);
 }
 .nav-link:hover {
-   background-color: rgba(190, 190, 190, 1);
-   border-radius: 8px;
-   transition-duration: .3s;
+  background-color: #e9e9e9;
+  border-radius: 8px;
+  transition-duration: 0.3s;
 }
 
-/*FOOTER*/
 footer {
-   background-color: rgba(80, 80, 80, 1);
-   text-align: left;
+  text-align: left;
+  background-color: rgb(80, 80, 80);
 }
+@media screen and (max-width: 576px) {
+  footer {
+    margin-top: 2rem;
+    padding: 2rem 3.75rem;
+  }
+}
+
 .footer__logo {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.footer__pages {
-   margin: auto 0;
-}
-.footer__media {
-   margin: auto 0;
+.footer__pages, .footer__media {
+  margin: auto 0;
 }
 .footer__list {
-   margin-top: 0;
+  margin-top: 0;
+}
+@media screen and (max-width: 576px) {
+  .footer__logo, .footer__pages, .footer__media {
+    margin: 1rem 0;
+  }
+  .footer__logo {
+    justify-content: flex-start;
+  }
+  .footer__media p {
+    display: none;
+  }
 }
 
-
-
-/*-----------------MAIN PAGE----------------------/
-/*COVER-SECTION*/
 #home {
-   margin: 0;
-   padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 .cover {
-   width: 100%;
-   height: 100vh;
-   background-image: url(../assets/img/home-img.jpg);
-   background-size: cover;
-   background-position: 55%;
-   position: relative;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/img/home-img.jpg);
+  background-size: cover;
+  background-position: 55%;
 }
 .cover__title {
-   width: 40%;
-   height: 40%;
-   padding: 2rem;
-   text-align: left;
-   background-color: rgba(200, 222, 226, 1);
-   position: absolute;
-   top: 10%;
-   left: 5%;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 40%;
+  height: 40%;
+  padding: 2rem;
+  text-align: left;
+  background-color: #c1d5f3;
 }
 .cover__title h1 {
-   font-size: 2rem;
+  font-size: 2rem;
 }
 .cover__title p {
-   font-size: 1.2rem;
-   margin-top: 3rem;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .cover {
+    height: 80vh;
+  }
+  .cover__title {
+    width: 50%;
+  }
+  .cover__title h1 {
+    font-size: 1.5rem;
+  }
+  .cover__title p {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .cover__title {
+    top: 5%;
+    width: 60%;
+    height: 40%;
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .cover__title h1 {
+    font-size: 1.4rem;
+  }
+  .cover__title p {
+    font-size: 1rem;
+  }
 }
 
-/*SOBRE-NOSOTROS SECTION*/
 .main-card {
-   margin: 3rem 0;
-   align-items: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+@media screen and (max-width: 576px) {
+  .main-card__image {
+    margin-bottom: 1.5rem;
+  }
+  .main-card--reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 420px) {
+  .main-card {
+    margin: 1.3rem auto;
+  }
+  .main-card__description {
+    margin: 1.3rem auto;
+  }
 }
 
-/*OPINIONES SECTION*/
 .opinion-card {
-   background-color: rgb(228, 228, 228, 1);
-   height: 25rem;
-   padding: 1.55rem;
-}
-.opinion-card__comment {
-   margin-top: 2.5rem;
+  height: 25rem;
+  padding: 1.55rem;
+  background-color: #e9e9e9;
 }
 .opinion-card__pfp {
-   border-radius: 50%;
+  border-radius: 50%;
+}
+.opinion-card__comment {
+  margin-top: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .opinion-card {
+    height: 19rem;
+    margin: 1rem 0;
+  }
+  .opinion-card__comment {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .opinion-card.card {
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+  }
+  .opinion-card__pfp {
+    margin-right: 1rem;
+    object-fit: contain;
+  }
+  .opinion-card__comment {
+    margin: 0 0 0 0.6rem;
+    font-size: 0.8rem;
+    text-align: left;
+  }
 }
 
-/*CONTACTO SECTION*/
 .contact {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   padding: 5rem 0;
-   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/home-img-03.jpg);
-   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/img/home-img-03.jpg);
+  background-size: cover;
 }
 .contact h2 {
-   color: rgb(233, 233, 233, 1);
+  color: rgb(255, 255, 255);
 }
+
 .contact-input {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
 }
 .contact-input__email {
-   font-family: 'Montserrat', sans-serif;
-   font-size: 100%;
-   padding: .8rem;
-   margin: .5rem 0;
-   width: 20rem;
-   height: 35px;
-   border-radius: 8px;
+  width: 20rem;
+  height: 35px;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  font-family: "Monserrat", sans-serif;
+  font-size: 100%;
+  border-radius: 8px;
 }
 .contact-input__btn {
-   background-color: rgba(218, 165, 32, 1);
-   border-color: rgb(204, 155, 33, 1);
-   padding: .4rem .8rem;
-   border-radius: 8px;
-   font-size: 1rem;
-   font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgb(218, 165, 32);
+  border-color: #816213;
+  border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .contact-input__btn {
+    width: 4.5rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .contact-input {
+    width: 60%;
+  }
+  .contact-input__email {
+    width: 100%;
+  }
 }
 
-
-
-/*-----------------ABOUT PAGE----------------------/
-/*HISTORIA SECTION*/
 #historia {
-   margin: 0;
+  margin: 0;
 }
+
 .about__block {
-   margin: 2rem auto;
-   width: 85%;
-   height: 27rem;
+  width: 85%;
+  height: 27rem;
+  margin: 2rem auto;
 }
 .about__img {
-   width: inherit;
-   height: inherit;
-   object-fit: cover;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
 }
 .about__desc {
-   margin: 1.75rem 5rem;
+  margin: 1.75rem 5rem;
+}
+@media screen and (max-width: 420px) {
+  .about__block {
+    width: 100%;
+  }
 }
 
-/*OBJECTIVOS SECTION*/
 #objetivos {
-   background-color: rgba(140, 140, 140, 1);
+  background-color: #b6b6b6;
 }
+
 .objective-grid {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr); 
-   grid-template-rows: 1fr;
-   justify-content: center; 
-   align-content: center; 
-   justify-items: center; 
-   align-items: center;
-   width: 90%;
-   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .objective-grid {
+    grid-template-columns: 1fr;
+    row-gap: 1%;
+  }
+}
+
+.objective-card-1, .objective-card-2, .objective-card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 30rem;
+  padding: 1.5rem;
+  background-size: cover;
 }
 .objective-card-1 {
-   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../assets/img/objetivo-01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../assets/img/objetivo-01.jpg);
 }
 .objective-card-2 {
-   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../assets/img/objetivos-02.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../assets/img/objetivos-02.jpg);
 }
 .objective-card-3 {
-   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../assets/img/objetivos-03.jpg);
-}
-.objective-card-1, .objective-card-2, .objective-card-3 {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   width: 80%;
-   height: 30rem;
-   padding: 1.5rem;
-   background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../assets/img/objetivos-03.jpg);
 }
 .objective-card__title {
-   color: rgba(233, 233, 233, 1);
-   font-size: 2em;
-   text-align: center;
-   margin-bottom: 4.5rem;
+  margin-bottom: 4.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  text-align: center;
 }
 .objective-card__desc {
-   color: rgba(233, 233, 233, 1);
-   font-size: 1.15em;
-   text-align: center;
-   margin-top: 4.5rem;
+  margin-top: 4.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.15em;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .objective-card-1, .objective-card-2, .objective-card-3 {
+    width: 60%;
+    height: 19rem;
+    background-position: 75%;
+  }
+  .objective-card__title {
+    font-size: 1.4rem;
+  }
+  .objective-card__desc {
+    font-size: 0.9rem;
+  }
 }
 
-
-
-/*-----------------SERVICE PAGE----------------------/
-/*SERVICIOS SECTION*/
 #servicios {
-   margin: 0;
+  margin: 0;
 }
+
 .service-grid {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr); 
-   grid-template-rows: repeat(3, 1fr); 
-   gap: 0px 0px;
-   justify-content: center; 
-   align-content: center; 
-   justify-items: center; 
-   align-items: center; 
-   width: 90%;
-   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0 0;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
 }
+@media screen and (max-width: 768px) {
+  .service-grid {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .service-grid {
+    display: block;
+  }
+}
+
 .service-category {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   width: 80%;
-   padding: 1rem;
-   margin: 1.1rem 0;
-   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
-   transition: all .4s ease-in-out;
-}
-.service-category:hover {
-   transform: scale(1.04);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  padding: 1rem;
+  margin: 1.1rem 0;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
 }
 .service-category img {
-   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
-.service-category__desc{
-   margin-left: 0.92rem;
-   text-align: left;
+.service-category:hover {
+  transform: scale(1.04);
+}
+.service-category__desc {
+  margin-left: 0.92rem;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .service-category {
+    display: block;
+    margin: 1rem 0;
+  }
+  .service-category__desc {
+    text-align: center;
+  }
+  .service-category__desc h3 {
+    margin-bottom: 0.2rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .service-category {
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+  }
 }
 
-/*PLANES SECTION*/
 .plan-grid {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr); 
-   grid-template-rows: 1fr;
-   justify-content: center; 
-   align-content: center; 
-   justify-items: center; 
-   align-items: center;
-   width: 90%;
-   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
 }
+@media screen and (max-width: 768px) {
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .plan-grid {
+    display: block;
+  }
+}
+
 .plan-card {
-   border: 4px solid rgba(140, 140, 140, 1);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   width: 70%;
-   height: 25rem;
-   margin: 0.7rem;
-   padding: 1.55rem;
-}
-.plan-card__title {
-   margin: 0.5rem 0;
-}
-.plan-card__desc {
-   margin: 3.25rem 0 4rem 0;
-}
-.plan-card__desc p {
-   padding: 0.4rem;
-}
-.plan-card__price {
-   margin: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 25rem;
+  margin: 0.7rem;
+  padding: 1.55rem;
+  border: 4px solid #838383;
 }
 .plan-card button {
-   font-size: 1rem;
-   font-weight: 600;
-   width: 6rem;
-   padding: 0.5rem;
-   border-radius: 8px;
-   background-color: rgb(38, 100, 194);
-   color: rgba(233, 233, 233, 1);
-   transition: all .3s ease-in-out;
+  width: 6rem;
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgb(38, 100, 194);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 }
 .plan-card button:hover {
-   color: rgba(0, 0, 0, 1);
-   background-color: rgba(233, 233, 233, 1);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+.plan-card__title {
+  margin: 0.5rem 0;
+}
+.plan-card__desc {
+  margin: 3.25rem 0 4rem 0;
+}
+.plan-card__desc p {
+  padding: 0.4rem;
+}
+.plan-card__price {
+  margin: 0.75rem 0;
+}
+@media screen and (max-width: 768px) {
+  .plan-card {
+    width: 40%;
+    height: 17rem;
+    margin: 1rem 0;
+    padding: 1.4rem;
+  }
+  .plan-card__desc {
+    margin: 2.5rem 0;
+  }
+  .plan-card__desc p {
+    padding: 0.2rem;
+  }
+  .plan-card__price {
+    margin: 0.25rem 0;
+  }
+  .plan-card button {
+    padding: 0.35rem;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 420px) {
+  .plan-card {
+    width: 50%;
+    margin: 1rem auto;
+  }
+  .plan-card__desc {
+    left: 27%;
+  }
+  .plan-card button {
+    top: 85%;
+    right: 35%;
+  }
 }
 
-
-
-/*-----------------CONTACT PAGE*----------------------/
-/*CONTACTO SECTION*/
 .form__input, .form__message {
-   font-family: 'Montserrat', sans-serif;
-   border-radius: 8px;
+  font-family: "Monserrat", sans-serif;
+  border-radius: 8px;
 }
 .form__message {
-   resize: none;
+  resize: none;
 }
 
-/*LOCALIDAD SECTION*/
-.location {
-   position: relative;
+@media screen and (max-width: 768px) {
+  .contact-form .row {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
-.location-details, .location iframe {
-   width: 100%;
-   height: 65vh;
+.location {
+  position: relative;
+}
+.location iframe, .location-details {
+  width: 100%;
+  height: 65vh;
 }
 .location-details {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   background-color: rgba(200, 200, 200, 1);
-   width: 425px;
-   text-align: left;
-   position: absolute;
-   top: 0;
-   right: 6%;
+  position: absolute;
+  top: 0;
+  right: 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 425px;
+  text-align: left;
+  background-color: #f6f6f6;
 }
-
-
-/*--------------------------MEDIA QUERIES----------------------------*/
-/*-----------------BOOTSTRAP 992px-------------------*/
-@media screen and (max-width: 992px) {
-   main p {
-      font-size: .9rem;
-   }
-}
-
-
-
-
-/*------------------TABLET DISPLAY-------------------*/
 @media screen and (max-width: 768px) {
-   /*-------MAIN PAGE------*/
-   /*COVER SECTION*/
-   .cover {
-      height: 80vh;
-   }
-   .cover__title {
-      width: 50%;
-   }
-   .cover__title h1 {
-      font-size: 1.5rem;
-   }
-   .cover__title p {
-      font-size: 1rem;
-      margin-top: 2rem;
-   }
-   
-   /*OPINIONES SECTION*/
-   .opinion-card {
-      height: 19rem;
-      margin: 1rem 0;
-   }
-   .opinion-card__comment {
-      font-size: 0.9rem;
-   }
-
-   /*CONTACTO SECTION*/
-   .contact-input__btn {
-      width: 4.5rem;
-   }
-
-
-
-   /*------ABOUT PAGE------*/
-   /*OBJETIVOS SECTION*/
-   .objective-grid {
-      grid-template-columns: 1fr;
-      row-gap: 1%;
-   }
-   .objective-card-1, .objective-card-2, .objective-card-3 {
-      width: 60%;
-      height: 19rem;
-      background-position: 75%;
-   }
-   .objective-card__title {
-      font-size: 1.4rem;
-   }
-   .objective-card__desc {
-      font-size: 0.9rem;
-   }
-
-
-
-   /*-----SERVICE PAGE-----*/
-   /*SERVICIOS SECTION*/
-   .service-grid {
-      width: 90%;
-   }
-   .service-category {
-      display: block;
-      margin: 1rem 0;
-   }
-   .service-category__desc {
-      text-align: center;
-   }
-   .service-category__desc h3 {
-      margin-bottom: 0.2rem;
-   }
-
-   /*PLANES SECTION*/
-   .plan-grid {
-      grid-template-columns: 1fr;
-   }
-   .plan-card {
-      width: 40%;
-      height: 17rem;
-      margin: 1rem 0;
-      padding: 1.4rem;
-   }
-   .plan-card__desc {
-      margin: 2.5rem 0;
-   }
-   .plan-card__desc p {
-      padding: 0.2rem;
-   }
-   .plan-card__price {
-      margin: 0.25rem 0;
-   }
-   .plan-card button {
-      padding: 0.35rem;
-      font-weight: 500;
-   }
-   
-
-
-   /*-----CONTACT PAGE-----*/
-   /*CONTACTO SECTION*/
-   .contact-form .row {
-      padding-left: 3rem;
-      padding-right: 3rem;
-   }
-
-
-   /*LOCALIDAD SECTION*/
-   .location {
-      position: static;
-   }
-   .location-details {
-      display: block;
-      background-color: rgba(255, 255, 255, 1);
-      position: static;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-   }
-   .location-details h2 {
-      margin-bottom: 2.5rem;
-   }
+  .location {
+    position: static;
+  }
+  .location-details {
+    position: static;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+  .location-details h2 {
+    margin-bottom: 2.5rem;
+  }
 }
 
-
-
-
-/*--------------------BOOTSTRAP 576px--------------------*/
-@media screen and (max-width: 576px) {
-   /*FOOTER*/
-   footer {
-      margin-top: 2rem;
-      padding: 2rem 3.75rem;
-   }
-   .footer__logo, .footer__pages, .footer__media {
-      margin: 1rem 0;
-   }
-   .footer__logo {
-      justify-content: flex-start;
-   }
-   .footer__media p {
-      display: none;
-   }
-
-
-   /*-------MAIN PAGE------*/
-   /*COVER SECTION*/
-   .cover__title {
-      width: 60%;
-      height: 40%;
-      top: 5%;
-      padding: .5rem;
-   }
-
-   /*SOBRE-NOSOTROS SECTION*/
-   .main-card__image {
-      margin-bottom: 1.5rem;
-   }
-   .main-card--reverse {
-      flex-direction: column-reverse;
-   }
-
-   /*OPINIONES SECTION*/
-   .opinion-card.card {
-      flex-direction: row;
-      justify-content: center;
-      width: 90%;
-      height: auto;
-      padding: 1rem;
-   }
-   .opinion-card__pfp {
-      margin-right: 1rem;
-      object-fit: contain;
-   }
-   .opinion-card__comment {
-      margin: 0 0 0 .6rem;
-      font-size: .8rem;
-      text-align: left;
-   }
-}
-
-
-
-
-/*----------------SMARTPHONE DIPLAY-------------------*/
-@media screen and (max-width: 420px) {
-   main p {
-      font-size: .8rem;
-   }
-
-   
-   /*-------MAIN PAGE------*/
-   /*COVER SECTION*/
-   .cover__title h1 {
-      font-size: 1.4rem;
-   }
-   .cover__title p {
-      font-size: 1rem;
-   }
-
-   /*SOBRE-NOSOTROS SECTION*/
-   .main-card {
-      margin: 1.3rem auto;
-   }
-   .main-card__description {
-      margin: 1.3rem auto;
-   }
-   
-   /*CONTACTO SECTION*/
-   .contact-input {
-      width: 60%;
-   }
-   .contact-input__email {
-      width: 100%;
-   }
-
-   /*------ABOUT PAGE------*/
-   .about__block {
-      width: 100%;
-   }
-
-
-
-   /*-----SERVICE PAGE-----*/
-   /*SERVICIOS SECTION*/
-   .service-grid {
-      display: block;
-   }
-   .service-category {
-      display: flex;
-      width: 90%;
-      margin: 1rem auto;
-   }
-
-   /*PLANES SECTION*/
-   .plan-grid {
-      display: block;
-   }
-   .plan-card {
-      width: 50%;
-      margin: 1rem auto;
-   }
-   .plan-card__desc {
-      left: 27%;
-   }
-   .plan-card button {
-      top: 85%;
-      right: 35%;
-   }
-}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,152 @@
+//SERVICIOS SECTION
+#servicios { margin: 0; }
+
+.service-grid { 
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   gap: 0 0;
+   justify-content: center;
+   align-content: center;
+   justify-items: center;
+   align-items: center;
+   width: 90%;
+   margin: auto;
+
+   @media screen and (max-width: $media-md) { 
+      width: 90%;
+   }
+   
+   @media screen and (max-width: $media-mobile) {
+      display: block;
+   }
+}
+
+.service-category {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 80%;
+   padding: 1rem;
+   margin: 1.1rem 0;
+   box-shadow: 2px 2px 5px 0 rgba($negro, .5);
+   transition: all .4s ease-in-out;
+
+   img { box-shadow: 2px 2px 5px 0 rgba($negro, .5); }
+   &:hover { transform: scale(1.04); }
+   
+   &__desc {
+      margin-left: 0.92rem;
+      text-align: left;
+   }
+
+   @media screen and (max-width: $media-md) {
+      display: block;
+      margin: 1rem 0;
+
+      &__desc {
+         text-align: center;
+
+         h3 { margin-bottom: .2rem; }
+      }
+   }
+
+   @media screen and (max-width: $media-mobile) {
+      display: flex;
+      width: 90%;
+      margin: 1rem auto;
+   }
+}
+
+//PLANES SECTION
+.plan-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); 
+   grid-template-rows: 1fr;
+   justify-content: center; 
+   align-content: center; 
+   justify-items: center; 
+   align-items: center;
+   width: 90%;
+   margin: auto;
+
+   @media screen and (max-width: $media-md) {
+      grid-template-columns: 1fr;
+   }
+
+   @media screen and (max-width: $media-md) {
+      display: block;
+   }
+}
+
+.plan-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 70%;
+   height: 25rem;
+   margin: 0.7rem;
+   padding: 1.55rem;
+   border: 4px solid lighten($gris, 20%);
+
+   button {
+      width: 6rem;
+      padding: 0.5rem;
+      color: $blanco;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: $azul;
+      border-radius: 8px;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+         color: $negro;
+         background-color: $blanco;
+      }
+   }
+
+   &__title { margin: .5rem 0; }
+
+   &__desc {
+      margin: 3.25rem 0 4rem 0;
+      
+      p {
+         padding: .4rem;
+      }
+   }
+
+   &__price { margin: .75rem 0; }
+
+   @media screen and (max-width: $media-md) {
+      width: 40%;
+      height: 17rem;
+      margin: 1rem 0;
+      padding: 1.4rem;
+
+      &__desc { 
+         margin: 2.5rem 0;
+         
+         p { padding: .2rem; }
+      }
+
+      &__price { margin: .25rem 0; }
+
+      button {
+         padding: .35rem;
+         font-weight: 500;
+      }
+   }
+
+   @media screen and (max-width: $media-mobile) {
+      width: 50%;
+      margin: 1rem auto;
+
+      &__desc { left: 27%; }
+
+      button {
+         top: 85%;
+         right: 35%;
+      }
+   }
+}

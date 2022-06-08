@@ -1,0 +1,57 @@
+//CONTACTO SECTION
+.form {
+   &__input,
+   &__message {
+      font-family: $fuente-base;
+      border-radius: 8px;
+   }
+
+   &__message { resize: none; }
+}
+
+@media screen and (max-width: $media-md) {
+   .contact-form {
+      .row {
+         padding-left: 3rem;
+         padding-right: 3rem;
+      }
+   }
+}
+
+//LOCALIDAD SECTION
+.location {
+   position: relative;
+
+   iframe,
+   &-details {
+      width: 100%;
+      height: 65vh;
+   }
+
+   &-details {
+      position: absolute;
+      top: 0;
+      right: 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 425px;
+      text-align: left;
+      background-color: lighten($gris, 65%);
+   }
+
+   @media screen and (max-width: $media-md) {
+      position: static;
+
+      &-details {
+         position: static;
+         display: block;
+         width: 100%;
+         height: 100%;
+         text-align: center;
+         background-color: $blanco;
+
+         h2 { margin-bottom: 2.5rem; }
+      }
+   }
+}

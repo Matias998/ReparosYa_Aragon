@@ -1,0 +1,167 @@
+//COVER SECTION
+#home {
+   margin: 0;
+   padding: 0;
+}
+
+.cover {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background-image: url(../assets/img/home-img.jpg);
+   background-size: cover;
+   background-position: 55%;
+
+   &__title {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      width: 40%;
+      height: 40%;
+      padding: 2rem;
+      text-align: left;
+      background-color: lighten($azul, 40%);
+
+      h1 { font-size: 2rem; }
+
+      p {
+         font-size: 1.2rem;
+         margin-top: 3rem;
+      }
+   }
+
+   @media screen and (max-width: $media-md) {
+      height: 80vh;
+
+      &__title {
+         width: 50%;
+
+         h1 { font-size: 1.5rem; }
+
+         p {
+            font-size: 1rem;
+            margin-top: 2rem;
+         }
+      }
+   }
+
+   @media screen and (max-width: $media-sm) {
+      &__title {
+         top: 5%;
+         width: 60%;
+         height: 40%;
+         padding: .5rem;
+      }
+   }
+
+   @media screen and (max-width: $media-mobile) {
+      &__title {
+         h1 { font-size: 1.4rem; }
+         p { font-size: 1rem; }
+      }
+   }
+}
+
+//SOBRE-NOSOTROS SECTION
+.main-card {
+   align-items: center;
+   margin: 3rem 0;
+
+   @media screen and (max-width: $media-sm) {
+      &__image { margin-bottom: 1.5rem; }
+      &--reverse { flex-direction: column-reverse; }
+   }
+
+   @media screen and (max-width: $media-mobile) {
+      margin: 1.3rem auto;
+      
+      &__description { margin: 1.3rem auto; }
+   }
+}
+
+//OPINIONES SECTION
+.opinion-card {
+   height: 25rem;
+   padding: 1.55rem;
+   background-color: lighten($gris, 60%);
+   
+   &__pfp { border-radius: 50%; }
+   &__comment { margin-top: 2.5rem; }
+
+   @media screen and (max-width: $media-md) {
+      height: 19rem;
+      margin: 1rem 0;
+
+      &__comment { font-size: .9rem; }
+   }
+
+   @media screen and (max-width: $media-sm) {
+      &.card {
+         flex-direction: row;
+         justify-content: center;
+         width: 90%;
+         height: auto;
+         padding: 1rem;
+      }
+
+      &__pfp {
+         margin-right: 1rem;
+         object-fit: contain;
+      }
+
+      &__comment {
+         margin: 0 0 0 .6rem;
+         font-size: .8rem;
+         text-align: left;
+      }
+   }
+}
+
+//CONTACTO SECTION
+.contact {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 5rem 0;
+   background-image: linear-gradient(rgba($negro, .6), rgba($negro, .6)), url(../assets/img/home-img-03.jpg);
+   background-size: cover;
+
+   h2 { color: $blanco }
+}
+
+.contact-input {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 30%;
+
+   &__email {
+      width: 20rem;
+      height: 35px;
+      margin: .5rem 0;
+      padding: .5rem 0;
+      font-family: $fuente-base;
+      font-size: 100%;
+      border-radius: 8px;
+   }
+
+   &__btn {
+      padding: .4rem .8rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: $dorado;
+      border-color: darken($dorado, 20%);
+      border-radius: 8px;
+   }
+
+   @media screen and (max-width: $media-md) {
+      &__btn { width: 4.5rem; }
+   }
+
+   @media screen and (max-width: $media-mobile) {
+      width: 60%;
+
+      &__email { width: 100% }
+   }
+}
