@@ -5,27 +5,25 @@
 }
 
 .cover {
+   @include tamaños(100%, 100vh);
    position: relative;
-   width: 100%;
-   height: 100vh;
    background-image: url(../assets/img/home-img.jpg);
    background-size: cover;
    background-position: 55%;
 
    &__title {
+      @include tamaños(40%, 40%);
       position: absolute;
       top: 10%;
       left: 5%;
-      width: 40%;
-      height: 40%;
       padding: 2rem;
       text-align: left;
-      background-color: lighten($azul, 40%);
+      background-color: map-get($colores, "celeste")
 
-      h1 { font-size: 2rem; }
+      h1 { font-size: map-get($fuente-size, "x-grande"); }
 
       p {
-         font-size: 1.2rem;
+         font-size: map-get($fuente-size, "mediano");
          margin-top: 3rem;
       }
    }
@@ -36,10 +34,10 @@
       &__title {
          width: 50%;
 
-         h1 { font-size: 1.5rem; }
+         h1 { font-size: map-get($fuente-size, "grande"); }
 
          p {
-            font-size: 1rem;
+            font-size: map-get($fuente-size, "pequeño");
             margin-top: 2rem;
          }
       }
@@ -47,9 +45,8 @@
 
    @media screen and (max-width: $media-sm) {
       &__title {
+         @include tamaños(60%, 40%);
          top: 5%;
-         width: 60%;
-         height: 40%;
          padding: .5rem;
       }
    }
@@ -57,7 +54,6 @@
    @media screen and (max-width: $media-mobile) {
       &__title {
          h1 { font-size: 1.4rem; }
-         p { font-size: 1rem; }
       }
    }
 }
@@ -83,7 +79,7 @@
 .opinion-card {
    height: 25rem;
    padding: 1.55rem;
-   background-color: lighten($gris, 60%);
+   background-color: map-get($colores, "gris-claro");
    
    &__pfp { border-radius: 50%; }
    &__comment { margin-top: 2.5rem; }
@@ -92,15 +88,14 @@
       height: 19rem;
       margin: 1rem 0;
 
-      &__comment { font-size: .9rem; }
+      &__comment { font-size: map-get($fuente-size, "x-pequeño"); }
    }
 
    @media screen and (max-width: $media-sm) {
       &.card {
+         @include tamaños(90%, auto);
          flex-direction: row;
          justify-content: center;
-         width: 90%;
-         height: auto;
          padding: 1rem;
       }
 
@@ -111,7 +106,6 @@
 
       &__comment {
          margin: 0 0 0 .6rem;
-         font-size: .8rem;
          text-align: left;
       }
    }
@@ -127,7 +121,7 @@
    background-image: linear-gradient(rgba($negro, .6), rgba($negro, .6)), url(../assets/img/home-img-03.jpg);
    background-size: cover;
 
-   h2 { color: $blanco }
+   h2 { color: map-get($colores, "blanco") }
 }
 
 .contact-input {
@@ -137,8 +131,7 @@
    width: 30%;
 
    &__email {
-      width: 20rem;
-      height: 35px;
+      @include tamaños(20rem, 35px);
       margin: .5rem 0;
       padding: .5rem 0;
       font-family: $fuente-base;
@@ -147,12 +140,16 @@
    }
 
    &__btn {
+      @include estilo-btn;
       padding: .4rem .8rem;
-      font-size: 1rem;
-      font-weight: 600;
-      background-color: $dorado;
-      border-color: darken($dorado, 20%);
-      border-radius: 8px;
+      font-size: map-get($fuente-size, "pequeño");
+      background-color: map-get($colores, "secundario");
+      border-color: map-get($colores, "dorado-oscuro");
+
+      &:hover {
+         color: map-get($colores, "negro");
+         background-color: map-get($colores, "blanco");
+      }
    }
 
    @media screen and (max-width: $media-md) {

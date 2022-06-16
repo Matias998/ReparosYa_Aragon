@@ -1,0 +1,9 @@
+@mixin tamaños($ancho, $alto) {
+   width: $ancho;
+   height: $alto;
+}
+
+@mixin estilo-btn {
+   font-weight: 600;
+   border-radius: 8px;
+}

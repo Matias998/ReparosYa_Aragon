@@ -1,16 +1,16 @@
 //HISTORIA SECTION
-#historia { margin: 0; }
+#historia { padding: 2rem 0; }
 
 .about {
+   padding: 2rem 0;
+
    &__block {
       width: 85%;
-      height: 27rem;
       margin: 2rem auto;
    }
 
    &__img {
       width: inherit;
-      height: inherit;
       object-fit: cover;
    }
 
@@ -22,22 +22,27 @@
 }
 
 //OBJETIVOS SECTION
-#objetivos { background-color: lighten($gris, 40%); }
+#objetivos { 
+   padding: 2rem 0;
+   background-color: map-get($colores, "gris-claro");
+
+   h2 { margin-bottom: 2rem; }
+}
 
 .objective-grid {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr); 
-   grid-template-rows: 1fr;
-   justify-content: center; 
-   align-content: center; 
-   justify-items: center; 
-   align-items: center;
-   width: 90%;
-   margin: auto;
+   @extend %display-grid;
+   padding: 1.5rem 0;
+   height: 35rem;
 
    @media screen and (max-width: $media-md) {
       grid-template-columns: 1fr;
-      row-gap: 1%;
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 4%;
+      height: 65rem;
+   }
+
+   @media screen and (max-width: $media-mobile) {
+      height: 84.5rem;
    }
 }
 
@@ -45,12 +50,11 @@
    &-1,
    &-2,
    &-3 {
+      @include tamaños(90%, 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 80%;
-      height: 30rem;
       padding: 1.5rem;
       background-size: cover;
    }
@@ -61,15 +65,15 @@
 
    &__title {
       margin-bottom: 4.5rem;
-      color: $blanco;
-      font-size: 2rem;
+      color: map-get($colores, "blanco");
+      font-size: map-get($fuente-size, "x-grande");
       text-align: center;
    }
 
    &__desc {
       margin-top: 4.5rem;
-      color: $blanco;
-      font-size: 1.15em;
+      color: map-get($colores, "blanco");
+      font-size: map-get($fuente-size, "mediano");
       text-align: center;
    }
 
@@ -77,12 +81,28 @@
       &-1,
       &-2,
       &-3 {
-         width: 60%;
-         height: 19rem;
+         @include tamaños(80%, 19rem);
          background-position: 75%;
       }
 
-      &__title { font-size: 1.4rem; }
-      &__desc { font-size: .9rem; }
+      &__title { 
+         margin-bottom: 3rem;
+         font-size: map-get($fuente-size, "grande"); 
+      }
+      &__desc { 
+         margin-top: 3rem;
+         font-size: map-get($fuente-size, "pequeño"); 
+      }
+   }
+
+   @media screen and (max-width: $media-mobile) {
+      &-1,
+      &-2,
+      &-3 { 
+         @include tamaños(100%, 25rem);
+      }
+
+      &__title { margin-bottom: 2rem; }
+      &__desc { margin-top: 2rem; }
    }
 }

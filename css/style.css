@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap");
+.plan-grid, .service-grid, .objective-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  width: 90%;
+  margin: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +29,7 @@ h3 {
 p,
 li,
 a {
-  font-family: "Monserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 992px) {
@@ -93,28 +105,26 @@ footer {
 }
 
 .cover {
-  position: relative;
   width: 100%;
   height: 100vh;
+  position: relative;
   background-image: url(../assets/img/home-img.jpg);
   background-size: cover;
   background-position: 55%;
 }
 .cover__title {
+  width: 40%;
+  height: 40%;
   position: absolute;
   top: 10%;
   left: 5%;
-  width: 40%;
-  height: 40%;
   padding: 2rem;
   text-align: left;
-  background-color: #c1d5f3;
-}
-.cover__title h1 {
-  font-size: 2rem;
+  background-color: #c1d5f3 h1;
+  background-color-font-size: 2rem;
 }
 .cover__title p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-top: 3rem;
 }
 @media screen and (max-width: 768px) {
@@ -134,18 +144,15 @@ footer {
 }
 @media screen and (max-width: 576px) {
   .cover__title {
-    top: 5%;
     width: 60%;
     height: 40%;
+    top: 5%;
     padding: 0.5rem;
   }
 }
 @media screen and (max-width: 420px) {
   .cover__title h1 {
     font-size: 1.4rem;
-  }
-  .cover__title p {
-    font-size: 1rem;
   }
 }
 
@@ -187,15 +194,15 @@ footer {
     margin: 1rem 0;
   }
   .opinion-card__comment {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 576px) {
   .opinion-card.card {
-    flex-direction: row;
-    justify-content: center;
     width: 90%;
     height: auto;
+    flex-direction: row;
+    justify-content: center;
     padding: 1rem;
   }
   .opinion-card__pfp {
@@ -204,7 +211,6 @@ footer {
   }
   .opinion-card__comment {
     margin: 0 0 0 0.6rem;
-    font-size: 0.8rem;
     text-align: left;
   }
 }
@@ -233,17 +239,21 @@ footer {
   height: 35px;
   margin: 0.5rem 0;
   padding: 0.5rem 0;
-  font-family: "Monserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 100%;
   border-radius: 8px;
 }
 .contact-input__btn {
+  font-weight: 600;
+  border-radius: 8px;
   padding: 0.4rem 0.8rem;
   font-size: 1rem;
-  font-weight: 600;
   background-color: rgb(218, 165, 32);
   border-color: #816213;
-  border-radius: 8px;
+}
+.contact-input__btn:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 768px) {
   .contact-input__btn {
@@ -260,17 +270,18 @@ footer {
 }
 
 #historia {
-  margin: 0;
+  padding: 2rem 0;
 }
 
+.about {
+  padding: 2rem 0;
+}
 .about__block {
   width: 85%;
-  height: 27rem;
   margin: 2rem auto;
 }
 .about__img {
   width: inherit;
-  height: inherit;
   object-fit: cover;
 }
 .about__desc {
@@ -283,34 +294,38 @@ footer {
 }
 
 #objetivos {
-  background-color: #b6b6b6;
+  padding: 2rem 0;
+  background-color: #e9e9e9;
+}
+#objetivos h2 {
+  margin-bottom: 2rem;
 }
 
 .objective-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  width: 90%;
-  margin: auto;
+  padding: 1.5rem 0;
+  height: 35rem;
 }
 @media screen and (max-width: 768px) {
   .objective-grid {
     grid-template-columns: 1fr;
-    row-gap: 1%;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 4%;
+    height: 65rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .objective-grid {
+    height: 84.5rem;
   }
 }
 
 .objective-card-1, .objective-card-2, .objective-card-3 {
+  width: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  height: 30rem;
   padding: 1.5rem;
   background-size: cover;
 }
@@ -332,43 +347,44 @@ footer {
 .objective-card__desc {
   margin-top: 4.5rem;
   color: rgb(255, 255, 255);
-  font-size: 1.15em;
+  font-size: 1.25rem;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
   .objective-card-1, .objective-card-2, .objective-card-3 {
-    width: 60%;
+    width: 80%;
     height: 19rem;
     background-position: 75%;
   }
   .objective-card__title {
-    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
   }
   .objective-card__desc {
-    font-size: 0.9rem;
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .objective-card-1, .objective-card-2, .objective-card-3 {
+    width: 100%;
+    height: 25rem;
+  }
+  .objective-card__title {
+    margin-bottom: 2rem;
+  }
+  .objective-card__desc {
+    margin-top: 2rem;
   }
 }
 
 #servicios {
-  margin: 0;
+  padding: 2rem 0;
 }
 
 .service-grid {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 0 0;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-}
-@media screen and (max-width: 768px) {
-  .service-grid {
-    width: 90%;
-  }
 }
 @media screen and (max-width: 420px) {
   .service-grid {
@@ -377,17 +393,21 @@ footer {
 }
 
 .service-category {
+  width: 80%;
+  height: 85%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
   padding: 1rem;
-  margin: 1.1rem 0;
+  margin: 1.25rem 0;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-in-out;
 }
 .service-category img {
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.service-category h3 {
+  font-size: 1.25rem;
 }
 .service-category:hover {
   transform: scale(1.04);
@@ -410,53 +430,47 @@ footer {
 }
 @media screen and (max-width: 420px) {
   .service-category {
-    display: flex;
     width: 90%;
-    margin: 1rem auto;
+    height: 13rem;
+    display: flex;
+    margin: 1.5rem auto;
   }
 }
 
-.plan-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  width: 90%;
-  margin: auto;
+#planes {
+  padding: 2rem 0;
 }
+#planes h2 {
+  margin-bottom: 1.5rem;
+}
+
 @media screen and (max-width: 768px) {
   .plan-grid {
     grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 768px) {
-  .plan-grid {
-    display: block;
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 
 .plan-card {
+  width: 85%;
+  height: 28rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
-  height: 25rem;
   margin: 0.7rem;
   padding: 1.55rem;
   border: 4px solid #838383;
 }
 .plan-card button {
+  font-weight: 600;
+  border-radius: 8px;
   width: 6rem;
   padding: 0.5rem;
   color: rgb(255, 255, 255);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
   background-color: rgb(38, 100, 194);
-  border-radius: 8px;
+  border-color: #0d2242;
   transition: all 0.3s ease-in-out;
 }
 .plan-card button:hover {
@@ -464,32 +478,31 @@ footer {
   background-color: rgb(255, 255, 255);
 }
 .plan-card__title {
-  margin: 0.5rem 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .plan-card__desc {
-  margin: 3.25rem 0 4rem 0;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
 }
 .plan-card__desc p {
-  padding: 0.4rem;
-}
-.plan-card__price {
-  margin: 0.75rem 0;
+  margin: 0;
+  padding: 0.2rem;
 }
 @media screen and (max-width: 768px) {
   .plan-card {
-    width: 40%;
-    height: 17rem;
+    width: 50%;
+    height: 25rem;
     margin: 1rem 0;
     padding: 1.4rem;
   }
   .plan-card__desc {
-    margin: 2.5rem 0;
-  }
-  .plan-card__desc p {
-    padding: 0.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
   }
   .plan-card__price {
-    margin: 0.25rem 0;
+    margin-bottom: 0.5rem;
   }
   .plan-card button {
     padding: 0.35rem;
@@ -498,20 +511,15 @@ footer {
 }
 @media screen and (max-width: 420px) {
   .plan-card {
-    width: 50%;
-    margin: 1rem auto;
+    width: 80%;
   }
-  .plan-card__desc {
-    left: 27%;
-  }
-  .plan-card button {
-    top: 85%;
-    right: 35%;
+  .plan-card__desc p {
+    font-size: 0.9rem;
   }
 }
 
 .form__input, .form__message {
-  font-family: "Monserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   border-radius: 8px;
 }
 .form__message {
@@ -540,17 +548,17 @@ footer {
   justify-content: space-around;
   width: 425px;
   text-align: left;
-  background-color: #f6f6f6;
+  background-color: #e9e9e9;
 }
 @media screen and (max-width: 768px) {
   .location {
     position: static;
   }
   .location-details {
-    position: static;
-    display: block;
     width: 100%;
     height: 100%;
+    position: static;
+    display: block;
     text-align: center;
     background-color: rgb(255, 255, 255);
   }

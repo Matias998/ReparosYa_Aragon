@@ -1,3 +1,18 @@
+//Tipografia
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap');
+$fuente-titulo: 'Open Sans', sans-serif;
+$fuente-base: 'Montserrat', sans-serif;
+
+//Colores neutros
+$negro: rgb(0, 0, 0);
+$blanco: rgb(255, 255, 255);
+$gris: rgb(80, 80, 80);
+
+//Colores principales
+$dorado: rgb(218, 165, 32);
+$azul: rgb(38, 100, 194);
+
+//Media queries
 $media-lg: 992px;
 $media-md: 768px;
 $media-sm: 576px;

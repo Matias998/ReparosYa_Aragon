@@ -4,28 +4,44 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/style.css">
+   <meta name="description" content="ReparosYa te ofrece una variedad de servicios segun lo que necesites para mantener o mejorar tu hogar">
+   <meta name="keywords" content="reparos, reparaciones, arreglos, mantenimiento, servicios, hogar, casa, tecnicos,
+   especialistas, electricista, plomeria, limpieza, carpinteria, cerrajeria, repuestos, instalacion, contratos">
+   <link rel="icon" href="../assets/img/favicon.ico">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link rel="stylesheet" href="./css/style.css">
    <script src="https://kit.fontawesome.com/7ad47797ff.js" crossorigin="anonymous"></script>
-   <title>Servicios</title>
+   <title>ReparosYa | Servicios</title>
 </head>
 <body>
    <header>
-      <a href="../índex.html"><img src="../assets/img/logo.png" alt="logo" class="logo"></a>
-      <nav class="navbar">
-         <ul>
-            <li class="navbar__link"><a href="./sobre-nosotros.html">Sobre nosotros</a></li>
-            <li class="navbar__link"><a href="#">Servicios</a></li>
-            <li class="navbar__link"><a href="./contacto.html">Contacto</a></li>
-         </ul>
-      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light">
+         <div class="container-fluid">
+           <a class="navbar-brand" href="../índex.html">
+            <img class="d-inline-block align-text-top logo" src="../assets/img/logo.png" alt="logo de herramientas">
+             ReparosYa
+           </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="../índex.html">Home</a>
+              <a class="nav-link" href="./sobre-nosotros.html">Sobre nosotros</a>
+              <a class="nav-link disabled">Servicios</a>
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </div>
+          </div>
+         </div>
+       </nav>
    </header>
 
    <main>
       <section id="servicios">
-         <h2 class="section-title">Nuestros servicios</h2>
+         <h2>Nuestros servicios</h2>
          <div class="service-grid">
             <div class="service-category">
-               <img src="../assets/img/plomero.png" alt="foto de cañeria">
+               <img src="../assets/img/plomero.png" alt="icono de cañeria">
                <div class="service-category__desc">
                   <h3>Plomeria</h3>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -33,7 +49,7 @@
                </div>
             </div>
             <div class="service-category">
-               <img src="../assets/img/electrisista.png" alt="foto de cableado electrico">
+               <img src="../assets/img/electrisista.png" alt="icono de medidor de electricidad">
                <div class="service-category__desc">
                   <h3>Electricista</h3>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -42,7 +58,7 @@
                </div>
             </div>
             <div class="service-category">
-               <img src="../assets/img/carpintero.png" alt="foto de carpinteria">
+               <img src="../assets/img/carpintero.png" alt="icono de carpinteria">
                <div class="service-category__desc">
                   <h3>Carpinteria</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -50,7 +66,7 @@
                </div>
             </div>
             <div class="service-category">
-               <img src="../assets/img/electrodomestico.png" alt="foto de lavarropas">
+               <img src="../assets/img/electrodomestico.png" alt="icono de lavarropas">
                <div class="service-category__desc">
                   <h3>Electrodomesticos</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -58,7 +74,7 @@
                </div>
             </div>
             <div class="service-category">
-               <img src="../assets/img/limpieza.png" alt="foto de trapeador">
+               <img src="../assets/img/limpieza.png" alt="icono de trapeador">
                <div class="service-category__desc">
                   <h3>Limpieza</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -66,7 +82,7 @@
                </div>
             </div>
             <div class="service-category">
-               <img src="../assets/img/cerrajeria.png" alt="foto de cerrajeria">
+               <img src="../assets/img/cerrajeria.png" alt="icono de cerrajeria">
                <div class="service-category__desc">
                   <h3>Cerrajeria</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -77,67 +93,71 @@
       </section>
 
       <section id="planes">
-         <div class="plan-block">
-            <h2 class="section-title">Planes</h2>
-            <div class="plan-grid">
-               <div class="plan-card">
-                  <h3 class="plan-card__title">BASICO</h3>
-                  <div class="plan-card__desc">
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
-                  </div>
-                  <h3 class="plan-card__price">$999</h3>
-                  <button class="btn">Acceder</button>
+         <h2>Planes</h2>
+         <div class="plan-grid">
+            <div class="plan-card">
+               <h3 class="plan-card__title">BASICO</h3>
+               <div class="plan-card__desc">
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
                </div>
-               <div class="plan-card">
-                  <h3 class="plan-card__title">ESTANDAR</h3>
-                  <div class="plan-card__desc">
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
-                  </div>
-                  <h3 class="plan-card__price">$999</h3>
-                  <button class="btn">Acceder</button>
+               <h3 class="plan-card__price">$999</h3>
+               <button class="btn">Acceder</button>
+            </div>
+            <div class="plan-card">
+               <h3 class="plan-card__title">ESTANDAR</h3>
+               <div class="plan-card__desc">
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-times"></i>Lorem, ipsum.</p>
                </div>
-               <div class="plan-card">
-                  <h3 class="plan-card__title">PREMIUM</h3>
-                  <div class="plan-card__desc">
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                     <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
-                  </div>
-                  <h3 class="plan-card__price">$999</h3>
-                  <button class="btn">Acceder</button>
+               <h3 class="plan-card__price">$999</h3>
+               <button class="btn">Acceder</button>
+            </div>
+            <div class="plan-card">
+               <h3 class="plan-card__title">PREMIUM</h3>
+               <div class="plan-card__desc">
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
+                  <p><i class="fas fa-check"></i>Lorem, ipsum.</p>
                </div>
+               <h3 class="plan-card__price">$999</h3>
+               <button class="btn">Acceder</button>
             </div>
          </div>
       </section>
    </main>
 
-   <footer>
-      <img src="../assets/img/logo.png" alt="logo" class="logo">
-      <div class="footer__pages">
-         <p>Paginas</p>
-         <ul class="footer__list">
-            <li class="footer__link"><a href="./sobre-nosotros.html">Sobre nosotros</a></li>
-            <li class="footer__link"><a href="#">Servicios</a></li>
-            <li class="footer__link"><a href="./contacto.html">Contacto</a></li>
-         </ul>
-      </div>
-      <div class="footer__media">
-         <p>Visitanos en las redes</p>
-         <ul class="footer__list">
-            <li class="footer__link"><i class="fab fa-facebook"></i> Facebook</li>
-            <li class="footer__link"><i class="fab fa-instagram"></i> Instagram</li>
-         </ul>
+   <footer class="container-fluid mt-5 p-5 text-white">
+      <div class="row">
+         <div class="col-sm-4 footer__logo">
+            <img class="logo" src="../assets/img/logo.png" alt="logo de herramientas">
+         </div>
+         <div class="col-sm-4 footer__pages">
+            <p>Paginas</p>
+            <ul class="list-unstyled footer__list">
+               <li class="footer__link"><a class="text-reset text-decoration-none" href="./sobre-nosotros.html">Sobre nosotros</a></li>
+               <li class="footer__link"><a class="text-reset text-decoration-none" href="./servicios.html">Servicios</a></li>
+               <li class="footer__link"><a class="text-reset text-decoration-none" href="./contacto.html">Contacto</a></li>
+            </ul>
+         </div>
+         <div class="col-sm-4 footer__media">
+            <p>Visitanos en las redes</p>
+            <ul class="list-unstyled footer__list">
+               <li class="footer__link"><i class="fab fa-facebook"></i> Facebook</li>
+               <li class="footer__link"><i class="fab fa-instagram"></i> Instagram</li>
+            </ul>
+         </div>
       </div>
    </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

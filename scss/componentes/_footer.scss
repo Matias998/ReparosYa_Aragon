@@ -1,6 +1,6 @@
 footer {
    text-align: left;
-   background-color: $gris;
+   background-color: map-get($colores, "gris");
 
    @media screen and (max-width: $media-sm) {
       margin-top: 2rem;

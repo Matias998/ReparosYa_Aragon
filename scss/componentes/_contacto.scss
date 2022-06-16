@@ -23,10 +23,7 @@
    position: relative;
 
    iframe,
-   &-details {
-      width: 100%;
-      height: 65vh;
-   }
+   &-details { @include tamaños(100%, 65vh); }
 
    &-details {
       position: absolute;
@@ -37,19 +34,18 @@
       justify-content: space-around;
       width: 425px;
       text-align: left;
-      background-color: lighten($gris, 65%);
+      background-color: map-get($colores, "gris-claro");
    }
 
    @media screen and (max-width: $media-md) {
       position: static;
 
       &-details {
+         @include tamaños(100%, 100%);
          position: static;
          display: block;
-         width: 100%;
-         height: 100%;
          text-align: center;
-         background-color: $blanco;
+         background-color: map-get($colores, "blanco");
 
          h2 { margin-bottom: 2.5rem; }
       }

@@ -1,0 +1,19 @@
+$colores: (
+   "primario":       $azul,
+   "secundario":     $dorado,
+   "blanco":         $blanco,
+   "negro":          $negro,
+   "gris":           $gris,
+   "gris-claro":     lighten($gris, 60%),
+   "celeste":        lighten($azul, 40%),
+   "dorado-oscuro":  darken($dorado, 20%),
+   "azul-oscuro":    darken($azul, 30%)
+);
+
+$fuente-size: (
+   "x-grande":    2rem,
+   "grande":      1.5rem,
+   "mediano":     1.25rem,
+   "pequeño":     1rem,
+   "x-pequeño":   .8rem
+);

@@ -23,12 +23,11 @@ main {
          font-size: .9rem;
       }
       @media screen and (max-width: $media-mobile) {
-         font-size: .8rem;
+         font-size: map-get($fuente-size, "x-pequeño");
       }
    }
 }
 
 .logo {
-   width: 30px;
-   height: 30px;
+   @include tamaños(30px, 30px);
 }

@@ -1,6 +1,7 @@
-@import"./base/colores";
-@import"./base/letra";
 @import"./base/variables";
+@import"./base/maps";
+@import"./base/mixins";
+@import"./base/extends";
 @import"./componentes/global";
 @import"./componentes/header";
 @import"./componentes/footer";
