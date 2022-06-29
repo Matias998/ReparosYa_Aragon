@@ -20,6 +20,11 @@ footer {
 
    &__list { margin-top: 0; }
 
+   &__link a { 
+      color: map-get($colores, "blanco");
+      &:hover { color: map-get($colores, "secundario"); }
+   }
+
    @media screen and (max-width: $media-sm) {
       &__logo,
       &__pages,

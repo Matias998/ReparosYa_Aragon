@@ -6,11 +6,12 @@ nav.navbar {
    padding: .6rem;
 }
 
-.nav-link {
+.navbar .navbar-nav .nav-link {
    color: map-get($colores, "negro");
    
    &:hover {
-      background-color: map-get($colores, "gris-claro");
+      background-color: map-get($colores, "dorado-oscuro");
+      color: map-get($colores, "blanco");
       border-radius: 8px;
       transition-duration: .3s;
    }

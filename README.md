@@ -1,21 +1,22 @@
 # ReparosYa_Aragon
 
-## Mejoras del SEO
+## Que es ReparosYa?
 
-![](assets/Captura_SEO.PNG)
+Este es un proyecto hecho para el curso de Desarrollo Web de Coderhouse, donde el objetivo era crear un sitio
+web desde cero.
+La idea del sitio es una plataforma en donde se pueda pedir uno o varios tecnicos expertos en la mantencion del
+hogar.
 
-- Agregue una etiqueta `<meta>` para la descripcion
-- Agregue una etiqueta `<meta>` para los keywords
-- Agregue una etiqueta `<link>` para el favicon
+## Que incluye?
 
-## Nuevos archivos en la carpeta scss
+El sitio consta de 4 paginas:
+- Home
+- Sobre Nosotros
+- Servicios
+- Contacto
 
-![](assets/Captura_Sass.PNG)
+## Herramientas utilizadas
 
-3 nuevos stylesheets:
-
-```
-_extends.scss
-_maps.scss
-_mixins.scss
-```
+- HTML y CSS
+- Bootstrap 5
+- Sass
