@@ -4,7 +4,7 @@
 
 Este es un proyecto hecho para el curso de Desarrollo Web de Coderhouse, donde el objetivo era crear un sitio
 web desde cero.
-La idea del sitio es una plataforma en donde se pueda pedir uno o varios tecnicos expertos en la mantencion del
+La idea del sitio es una plataforma en donde se pueda pedir uno o varios tecnicos especializados en la mantencion del
 hogar.
 
 ## Que incluye?
